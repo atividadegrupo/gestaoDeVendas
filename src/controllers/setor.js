@@ -31,11 +31,11 @@ function store(body) {
     }
 }
 
-function showAll(id) {
+function show() {
     return db;
 }
 
-function findId(id) {
+function index(id) {
     return db.find(el => el.id == id);
 } 
     
@@ -61,4 +61,4 @@ function destroy(id, body) {
     }
 }
 
-module.exports = {store, showAll, findId, update, destroy};
+module.exports = {store, show, index, update, destroy};

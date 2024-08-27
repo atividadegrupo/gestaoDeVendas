@@ -33,11 +33,11 @@ function store(body) {
     }
 }
 
-function showAll(id) {
+function show() {
     return db;
 }
 
-function findId(id) {
+function index(id) {
     return db.find(el => el.id == id);
 } 
     
@@ -53,7 +53,7 @@ function update(id, body) {
     }
 }
 
-function destroy(id, body) {
+function destroy(id) {
     const index = db.findIndex( el => el.id == id);
     if(index != -1) {
         db.splice(db[index], 1);
@@ -63,4 +63,4 @@ function destroy(id, body) {
     }
 }
 
-module.exports = {store, showAll, findId, update, destroy};
+module.exports = {store, show, index, update, destroy};

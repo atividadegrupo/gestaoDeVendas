@@ -1,6 +1,6 @@
 const db = [];
 
-const nextId = 1;
+let nextId = 1;   
 
 const model = (body, id = nextId++) => {
     if (body.nome != "" &&
@@ -35,7 +35,7 @@ const index = () => db;
 const show = (id) => db.find(el => el.id == id);
 
 const update = (id, body) => {
-    const index = db.findIndex((el) => el.id === id);
+    const index = db.findIndex((el) => el.id == id);
     const novo = model(body, parseInt(id));
 
     if (index != -1 && novo) {

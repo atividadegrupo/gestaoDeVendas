@@ -26,9 +26,9 @@ const store = (body) => {
   return 400;
   } 
 
-const index = () => carrinhos;
+const show = () => carrinhos;
 
-const show = (id) => carrinhos.find((el) => el.id == id);
+const index = (id) => carrinhos.find((el) => el.id == id);
 
 const update = (id, body) => {
   const index = carrinhos.findIndex((el) => el.id == id);
