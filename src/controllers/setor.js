@@ -1,11 +1,4 @@
-// const db = []; 
-const db = [
-    {
-        id: 1,
-        nome: "aldair",
-        id_setor: 1
-    }
-];
+const db = []; 
 
 let lastId;
 
@@ -17,12 +10,10 @@ if(db.length == 0) {
 
 function model(body) {
     const id = lastId;
-    const id_setor = body.id_setor;
-    if(body.nome != "" && id_setor != "") {
+    if(body.nome != "") {
         return {
             id,
-            nome: body.nome,
-            id_setor
+            nome: body.nome
         }
     } else {
         return undefined;

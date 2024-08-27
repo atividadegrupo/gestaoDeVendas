@@ -1,11 +1,4 @@
-// const db = []; 
-const db = [
-    {
-        id: 1,
-        nome: "coca",
-        id_setor: 1
-    }
-];
+const db = []; 
 
 let lastId;
 
